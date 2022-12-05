@@ -11,6 +11,10 @@ class GroupUserSerializer < BasicUserSerializer
              :timezone,
              :status
 
+  def timezone
+    user.user_option.timezone
+  end
+
   def include_added_at?
     object.respond_to? :added_at
   end
