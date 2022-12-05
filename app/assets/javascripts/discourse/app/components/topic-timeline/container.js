@@ -58,6 +58,10 @@ export default class TopicTimelineScrollArea extends Component {
     this.calculatePosition();
   }
 
+  get canCreatePost() {
+    return this.args.model.details?.can_create_post;
+  }
+
   get topicTitle() {
     return htmlSafe(this.args.mobileView ? this.args.model.fancyTitle : "");
   }

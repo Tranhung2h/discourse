@@ -354,6 +354,7 @@ createWidget("timeline-footer-controls", {
     const controls = [];
     const { currentUser, fullScreen, topic, notificationLevel } = attrs;
 
+    console.log(controls)
     if (
       this.siteSettings.summary_timeline_button &&
       !fullScreen &&
@@ -594,6 +595,7 @@ export default createWidget("topic-timeline", {
       ];
 
       result.push(h("div.timeline-scrollarea-wrapper", scroller));
+      console.log('here')
       result.push(this.attach("timeline-footer-controls", attrs));
     }
 
